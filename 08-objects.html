@@ -6,42 +6,47 @@
     <title>Objects</title>
 </head>
 <body>
-    
+    <p>youtube subscribe button</p>
+
+    <button onclick="
+        subscribe();
+    " class="js-subscribe-button">subscribe</button>
+
+    <p>amazon shipping calculator</p>
+
+    <p>orders under $40= +$10 shipping.</p>
+
+    <p>orders over $40= FREE shipping</p>
+
+    <input placeholder="cost of order" class="js-cost-input">
+
+    <button onclick="
+        getTotalCost();
+    " class="js-calculate-button">calculate</button>
+
+    <p class="js-display-output"></p>
 </body>
 <script>
-    /*const product = {
-        name: 'socks',
-        price: 100,
-        availability: true
+    function subscribe() {
+        const buttonElement = document.querySelector('.js-subscribe-button')
+
+        if (buttonElement.innerText === 'subscribe') {
+            buttonElement.innerHTML = 'subscribed!'
+        }
+        else {
+            buttonElement.innerHTML = 'subscribe'
+        }
     };
-    console.log(product);
-    console.log(product.name);
-    console.log(product.price);
-    console.log(product.availability);
 
-    product.price = 10;
-    console.log(product);
+    function getTotalCost() {
+        const inputElement = document.querySelector('.js-cost-input')
+        let cost = Number(inputElement.value)
 
-    product.size = 'XL';
-    console.log(product);
-
-    delete product.size;
-    console.log(product);
-    */
-
-   const product2 = {
-    name: 'basketball',
-    brand: 'Jordan',
-    ['Delivery-time']: 'one day',
-    'Delivery-cost': 20,
-    fun: function function1() {
-        console.log('Function inside an object')
-    },
-    ratings: {
-        star: 4.5,
-        count: 87
-    }
-    
-   }
+        if (cost < 40) {
+            cost = cost + 10
+        }
+        const emptyElement = document.querySelector('.js-display-output')
+            .innerHTML = `$${cost}`;
+    };
 </script>
 </html>

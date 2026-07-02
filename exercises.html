@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercises</title>
+</head>
+<body>
+    <p>coin flip</p>
+
+    <button onclick="
+        coinGame();
+    ">heads</button>
+    
+    <button onclick="
+        coinGame();
+    ">tails</button>
+</body>
+<script>
+    function coinGame() {
+        const randomNumber = Math.random();
+        let result = '';
+
+        if (randomNumber < 0.5) {
+            result = 'heads';
+        }
+        else {
+            result = 'tails';
+        }
+        console.log(result);
+    };
+
+    const product = {
+        name: 'basketball',
+        price: 2095,
+        ['delivery-time']: '3 days'
+    };
+    console.log(product);
+
+    product.price = 2595;
+    console.log(product);
+
+    function comparePrice(product1, product2) {
+        if (product1.price < product2.price) {
+            return product1
+        } 
+        else {
+            return product2
+        }
+    };
+
+    const product1 = {
+        name: 'socks',
+        price: 199
+    };
+
+    const product2 = {
+        name: 'sweater',
+        price: 399
+    };
+
+    console.log(comparePrice(product1, product2));
+
+    function isSameProduct(product3, product4) {
+        if (product3.name === product4.name && product3.price === product4.price) {
+            return true
+        }
+        else {
+            return false
+        };
+    };
+    const product3 = {
+        name: 'shoes',
+        price: 50
+    };
+
+    const product4 = {
+        name: 'shirt',
+        price: 150
+    };
+
+    console.log(isSameProduct(product3, product4));
+
+    const text = 'Ha!';
+    const output = text.repeat(6);
+    console.log(output);
+
+    
+</script>
+</html>
